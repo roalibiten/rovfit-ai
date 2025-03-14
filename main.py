@@ -104,7 +104,7 @@ def parse_ollama_output(output: str) -> dict:
 
     except json.JSONDecodeError:
         # If parsing JSON fails, return a friendly error
-        return {
+        return { 
             "item": "N/A",
             "calories": 0,
             "protein": 0,
