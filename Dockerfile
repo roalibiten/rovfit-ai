@@ -23,4 +23,4 @@ COPY . .
 EXPOSE 8000
 
 # Step 9: Command to run the app using Gunicorn (production-ready server)
-CMD ["gunicorn", "-w", "4", "-b", "0.0.0.0:8000", "main:app"]
+CMD ["sh", "-c", "gunicorn -w 4 -b 0.0.0.0:$PORT main:app"]
